@@ -7,3 +7,6 @@
 docker-compose up
 ```
   to run this app
+# phpmyadmin
+  user = root
+  password = MYSQL_ROOT_PASSWORD
