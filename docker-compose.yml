@@ -11,12 +11,14 @@ services:
             - ./php/src:/var/www/html/
         ports:
             - 8000:80
+        networks:
+            - BMINetwork
     db:
         container_name: db
         image: mysql
         restart: always
         environment:
-            MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
+            MYSQL_ROOT_PASSWORD: bmi
             MYSQL_DATABASE: MYSQL_DATABASE
             MYSQL_USER: MYSQL_USER
             MYSQL_PASSWORD: MYSQL_PASSWORD
@@ -24,6 +26,8 @@ services:
             - "./db:/docker-entrypoint-initdb.d"
         ports:
             - "9906:3306"
+        networks:
+            - BMINetwork
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         ports:
@@ -33,3 +37,7 @@ services:
             PMA_HOST: db
         depends_on:
             - db
+        networks:
+            - BMINetwork
+networks:
+  BMINetwork:
