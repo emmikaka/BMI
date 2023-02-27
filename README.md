@@ -8,5 +8,5 @@ docker-compose up
 ```
   to run this app
 # phpmyadmin
-  user = root
+  user = root <br>
   password = bmi
