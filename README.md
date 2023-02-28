@@ -6,7 +6,7 @@
 ```javascript
 docker-compose up
 ```
-  to run this app
+  to run this app open  localhost:8000/
 # phpmyadmin
   user = root <br>
   password = bmi
